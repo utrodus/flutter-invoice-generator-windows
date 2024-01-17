@@ -1,7 +1,0 @@
-{
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.expand": true,
-    "explorer.fileNesting.patterns": {
-        "*.dart": "${capture}.forms.dart"
-    }
-}

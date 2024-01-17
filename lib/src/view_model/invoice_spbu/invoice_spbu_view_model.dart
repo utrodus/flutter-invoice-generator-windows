@@ -5,7 +5,21 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
   final formKey = GlobalKey<FormState>();
 
   final TextEditingController noSpbuController = TextEditingController();
+  String _noSpbuValue = '';
+  String get noSpbuValue => _noSpbuValue;
+  set noSpbuValue(String value) {
+    _noSpbuValue = value;
+    notifyListeners();
+  }
+
   final TextEditingController alamatSpbuController = TextEditingController();
+  String _alamatSpbuValue = '';
+  String get alamatSpbuValue => _alamatSpbuValue;
+  set alamatSpbuValue(String value) {
+    _alamatSpbuValue = value;
+    notifyListeners();
+  }
+
   final TextEditingController noTelpController = TextEditingController();
   final TextEditingController tglInvoiceController = TextEditingController();
   final TextEditingController noInvoiceController = TextEditingController();

@@ -1,7 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_invoice_generator_windows/src/widgets/widgets.dart';
 
-import 'invoice_spbu_view.forms.dart';
+import 'invoice_spbu.dart';
 
 class InvoiceSpbuView extends StatelessWidget {
   const InvoiceSpbuView({super.key});
@@ -11,11 +11,9 @@ class InvoiceSpbuView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 16,
-          ),
+        Container(
+          color: Colors.grey[30],
+          padding: const EdgeInsets.all(20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +32,23 @@ class InvoiceSpbuView extends StatelessWidget {
             ],
           ),
         ),
-        const InvoiceSpbuForms(),
+        Expanded(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Expanded(child: InvoiceSpbuForms()),
+              Container(
+                width: 10,
+                height: double.infinity,
+                color: Colors.grey[30],
+              ),
+              const Expanded(
+                child: InvoiceSpbuPreview(),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
