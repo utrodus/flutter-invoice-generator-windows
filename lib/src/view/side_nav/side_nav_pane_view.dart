@@ -1,25 +1,19 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter_invoice_generator_windows/src/view/view.dart';
+import 'package:flutter_invoice_generator_windows/src/view_model/view_model.dart';
+import 'package:provider/provider.dart';
 
-import 'print_invoice_spbu.dart';
-import 'print_invoice_toko.dart';
-
-class SideNavPane extends StatefulWidget {
-  const SideNavPane({super.key});
-
-  @override
-  State<SideNavPane> createState() => _SideNavPaneState();
-}
-
-class _SideNavPaneState extends State<SideNavPane> {
-  int _currentPageIndex = 0;
+class SideNavPaneView extends StatelessWidget {
+  const SideNavPaneView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final viewModel = context.watch<SizeNavPaneViewModel>();
     return NavigationView(
       pane: NavigationPane(
         size: const NavigationPaneSize(
-          openMinWidth: 250.0,
-          openMaxWidth: 320.0,
+          openMinWidth: 200.0,
+          openMaxWidth: 250.0,
         ),
         header: Container(
           height: 60,
@@ -46,8 +40,8 @@ class _SideNavPaneState extends State<SideNavPane> {
             ],
           ),
         ),
-        selected: _currentPageIndex,
-        onChanged: (index) => setState(() => _currentPageIndex = index),
+        selected: viewModel.currentPageIndex,
+        onChanged: (index) => viewModel.currentPageIndex = index,
         items: [
           PaneItem(
             icon: const Icon(
@@ -60,7 +54,7 @@ class _SideNavPaneState extends State<SideNavPane> {
                 fontSize: 16,
               ),
             ),
-            body: const PrintInvoiceSpbu(),
+            body: const InvoiceSpbuView(),
           ),
           PaneItem(
             icon: const Icon(
@@ -73,7 +67,7 @@ class _SideNavPaneState extends State<SideNavPane> {
                 fontSize: 16,
               ),
             ),
-            body: const PrintInvoiceToko(),
+            body: const InvoiceTokoForms(),
           ),
         ],
       ),
