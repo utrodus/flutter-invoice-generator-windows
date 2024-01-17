@@ -31,32 +31,29 @@ class TextBoxWithLabel extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 350),
-          child: TextBox(
-            controller: controller,
-            placeholder: placeholder,
-            style: const TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
-            placeholderStyle: TextStyle(
-              fontSize: 16,
-              color: Colors.grey[120],
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4),
-              border: Border.all(
-                color: Colors.grey[120],
-                width: 1,
-              ),
-            ),
-            keyboardType: keyboardType,
-            prefix: prefix,
-            suffix: suffix,
-            onChanged: onChanged,
+        TextBox(
+          controller: controller,
+          placeholder: placeholder,
+          style: const TextStyle(
+            fontSize: 16,
+            color: Colors.black,
+            fontWeight: FontWeight.w500,
           ),
+          placeholderStyle: TextStyle(
+            fontSize: 16,
+            color: Colors.grey[120],
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4),
+            border: Border.all(
+              color: Colors.grey[120],
+              width: 1,
+            ),
+          ),
+          keyboardType: keyboardType,
+          prefix: prefix,
+          suffix: suffix,
+          onChanged: onChanged,
         ),
       ],
     );

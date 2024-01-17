@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => SizeNavPaneViewModel()),
-        ChangeNotifierProvider(create: (_) => InvoiceSpbuViewModel()),
+        ChangeNotifierProvider(
+            create: (_) => InvoiceSpbuViewModel()..initForm()),
       ],
       child: const FluentApp(
         title: 'Invoice Generator',

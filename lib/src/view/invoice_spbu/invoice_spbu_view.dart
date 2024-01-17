@@ -37,15 +37,13 @@ class InvoiceSpbuView extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Expanded(child: InvoiceSpbuForms()),
+              const InvoiceSpbuForms(),
               Container(
                 width: 10,
                 height: double.infinity,
                 color: Colors.grey[30],
               ),
-              const Expanded(
-                child: InvoiceSpbuPreview(),
-              ),
+              const InvoiceSpbuPreview(),
             ],
           ),
         ),

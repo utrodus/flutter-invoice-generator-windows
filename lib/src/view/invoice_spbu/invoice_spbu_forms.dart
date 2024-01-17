@@ -70,6 +70,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.noTelpController,
                     label: "Nomor Telepon",
                     placeholder: "Masukkan Nomor Telepon",
+                    onChanged: (value) {
+                      viewModel.noTelpValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -83,10 +86,13 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.tglInvoiceController,
                     label: "Tanggal Invoice",
                     placeholder: "Masukkan Tanggal Invoice",
+                    onChanged: (value) {
+                      viewModel.tglInvoiceValue = value;
+                    },
                   ),
                   const SizedBox(height: 18),
                   Container(
-                    constraints: const BoxConstraints(maxWidth: 350),
+                    width: double.infinity,
                     color: Colors.grey,
                     height: 2,
                   ),
@@ -102,6 +108,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.noInvoiceController,
                     label: "Nomor Invoice",
                     placeholder: "Masukkan Nomor Invoice",
+                    onChanged: (value) {
+                      viewModel.noInvoiceValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -115,6 +124,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.jenisBbmController,
                     label: "Jenis BBM",
                     placeholder: "Masukkan Jenis BBM",
+                    onChanged: (value) {
+                      viewModel.jenisBbmValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -128,6 +140,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.totalLiterController,
                     label: "Total Liter",
                     placeholder: "Masukkan Total Liter",
+                    onChanged: (value) {
+                      viewModel.totalLiterValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -141,6 +156,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.hargaPerliterController,
                     label: "Harga Per Liter",
                     placeholder: "Masukkan Harga Per Liter",
+                    onChanged: (value) {
+                      viewModel.hargaPerliterValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -154,10 +172,13 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.totalHargaController,
                     label: "Total Harga BBM",
                     placeholder: "Masukkan Total Harga BBM",
+                    onChanged: (value) {
+                      viewModel.totalHargaValue = value;
+                    },
                   ),
                   const SizedBox(height: 18),
                   Container(
-                    constraints: const BoxConstraints(maxWidth: 350),
+                    width: double.infinity,
                     color: Colors.grey,
                     height: 2,
                   ),
@@ -173,6 +194,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.totalBayarController,
                     label: "Total Bayar BBM (TUNAI)",
                     placeholder: "Masukkan Total Bayar BBM (TUNAI)",
+                    onChanged: (value) {
+                      viewModel.totalBayarValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -186,6 +210,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.nopolController,
                     label: "Nomor Polisi",
                     placeholder: "Masukkan Nomor Polisi",
+                    onChanged: (value) {
+                      viewModel.nopolValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -199,6 +226,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.pelangganController,
                     label: "Nama Pelanggan",
                     placeholder: "Masukkan Nama Pelanggan",
+                    onChanged: (value) {
+                      viewModel.pelangganValue = value;
+                    },
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -212,6 +242,9 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     controller: viewModel.operatorController,
                     label: "Operator SPBU",
                     placeholder: "Masukkan Operator SPBU",
+                    onChanged: (value) {
+                      viewModel.operatorValue = value;
+                    },
                   ),
                 ],
               )),
