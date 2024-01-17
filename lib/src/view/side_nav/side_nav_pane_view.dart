@@ -44,9 +44,10 @@ class SideNavPaneView extends StatelessWidget {
         onChanged: (index) => viewModel.currentPageIndex = index,
         items: [
           PaneItem(
-            icon: const Icon(
-              FluentIcons.print,
-              size: 20,
+            icon: const Image(
+              image: AssetImage('assets/ic_spbu.png'),
+              width: 20,
+              height: 20,
             ),
             title: const Text(
               'Print Struk SPBU',
@@ -57,9 +58,10 @@ class SideNavPaneView extends StatelessWidget {
             body: const InvoiceSpbuView(),
           ),
           PaneItem(
-            icon: const Icon(
-              FluentIcons.printfax_printer_file,
-              size: 20,
+            icon: const Image(
+              image: AssetImage('assets/ic_shop.png'),
+              width: 20,
+              height: 20,
             ),
             title: const Text(
               'Print Struk Toko',

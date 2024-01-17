@@ -10,7 +10,7 @@ void main() async {
   WindowOptions windowOptions = const WindowOptions(
     title: 'Invoice Generator',
     minimumSize: Size(1152, 768),
-    size: Size(1366, 768),
+    size: Size(1200, 768),
     center: true,
   );
   windowManager.waitUntilReadyToShow(windowOptions, () async {
