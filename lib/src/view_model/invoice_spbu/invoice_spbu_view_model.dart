@@ -23,11 +23,23 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearNoSpbu() {
+    noSpbuController.clear();
+    noSpbuValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController alamatSpbuController = TextEditingController();
   String _alamatSpbuValue = '';
   String get alamatSpbuValue => _alamatSpbuValue;
   set alamatSpbuValue(String value) {
     _alamatSpbuValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearAlamatSpbu() {
+    alamatSpbuController.clear();
+    alamatSpbuValue = '';
     notifyListeners();
   }
 
@@ -39,11 +51,23 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearNoTelp() {
+    noTelpController.clear();
+    noTelpValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController tglInvoiceController = TextEditingController();
   String _tglInvoiceValue = '';
   String get tglInvoiceValue => _tglInvoiceValue;
   set tglInvoiceValue(String value) {
     _tglInvoiceValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearTglInvoice() {
+    tglInvoiceController.clear();
+    tglInvoiceValue = '';
     notifyListeners();
   }
 
@@ -55,11 +79,23 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearNoInvoice() {
+    noInvoiceController.clear();
+    noInvoiceValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController jenisBbmController = TextEditingController();
   String _jenisBbmValue = '';
   String get jenisBbmValue => _jenisBbmValue;
   set jenisBbmValue(String value) {
     _jenisBbmValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearJenisBbm() {
+    jenisBbmController.clear();
+    jenisBbmValue = '';
     notifyListeners();
   }
 
@@ -71,11 +107,23 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearTotalLiter() {
+    totalLiterController.clear();
+    totalLiterValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController hargaPerliterController = TextEditingController();
   String _hargaPerliterValue = '';
   String get hargaPerliterValue => _hargaPerliterValue;
   set hargaPerliterValue(String value) {
     _hargaPerliterValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearHargaPerliter() {
+    hargaPerliterController.clear();
+    hargaPerliterValue = '';
     notifyListeners();
   }
 
@@ -87,11 +135,23 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearTotalHarga() {
+    totalHargaController.clear();
+    totalHargaValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController totalBayarController = TextEditingController();
   String _totalBayarValue = '';
   String get totalBayarValue => _totalBayarValue;
   set totalBayarValue(String value) {
     _totalBayarValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearTotalBayar() {
+    totalBayarController.clear();
+    totalBayarValue = '';
     notifyListeners();
   }
 
@@ -103,6 +163,12 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearNopol() {
+    nopolController.clear();
+    nopolValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController pelangganController = TextEditingController();
   String _pelangganValue = '';
   String get pelangganValue => _pelangganValue;
@@ -111,11 +177,54 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onTapClearPelanggan() {
+    pelangganController.clear();
+    pelangganValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController operatorController = TextEditingController();
   String _operatorValue = '';
   String get operatorValue => _operatorValue;
   set operatorValue(String value) {
     _operatorValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearOperator() {
+    operatorController.clear();
+    operatorValue = '';
+    notifyListeners();
+  }
+
+  /// clear all form field
+  void onTapClearAll() {
+    noSpbuValue = 'SPBU';
+    noSpbuController.text = noSpbuValue;
+    alamatSpbuValue = 'Jl.';
+    alamatSpbuController.text = alamatSpbuValue;
+    noTelpValue = 'Telp.';
+    noTelpController.text = noTelpValue;
+    tglInvoiceValue = 'Senin,';
+    tglInvoiceController.text = tglInvoiceValue;
+    noInvoiceController.clear();
+    noInvoiceValue = '';
+    jenisBbmController.clear();
+    jenisBbmValue = '';
+    totalLiterController.clear();
+    totalLiterValue = '';
+    hargaPerliterController.clear();
+    hargaPerliterValue = '';
+    totalHargaController.clear();
+    totalHargaValue = '';
+    totalBayarController.clear();
+    totalBayarValue = '';
+    nopolController.clear();
+    nopolValue = '';
+    pelangganController.clear();
+    pelangganValue = '';
+    operatorController.clear();
+    operatorValue = '';
     notifyListeners();
   }
 }

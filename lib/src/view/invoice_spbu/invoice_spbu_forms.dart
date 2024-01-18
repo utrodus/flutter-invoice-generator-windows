@@ -1,4 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_invoice_generator_windows/src/view_model/invoice_spbu/invoice_spbu.dart';
 import 'package:flutter_invoice_generator_windows/src/widgets/text_box_with_label.dart';
 import 'package:provider/provider.dart';
@@ -41,6 +42,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.noSpbuValue = value;
                     },
+                    suffix: viewModel.noSpbuValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearNoSpbu,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -57,6 +68,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.alamatSpbuValue = value;
                     },
+                    suffix: viewModel.alamatSpbuValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearAlamatSpbu,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -73,6 +94,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.noTelpValue = value;
                     },
+                    suffix: viewModel.noTelpValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearNoTelp,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -89,6 +120,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.tglInvoiceValue = value;
                     },
+                    suffix: viewModel.tglInvoiceValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTglInvoice,
+                          ),
                   ),
                   const SizedBox(height: 18),
                   Container(
@@ -111,6 +152,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.noInvoiceValue = value;
                     },
+                    suffix: viewModel.noInvoiceValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearNoInvoice,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -127,6 +178,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.jenisBbmValue = value;
                     },
+                    suffix: viewModel.jenisBbmValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearJenisBbm,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -143,6 +204,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.totalLiterValue = value;
                     },
+                    suffix: viewModel.totalLiterValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTotalLiter,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -159,6 +230,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.hargaPerliterValue = value;
                     },
+                    suffix: viewModel.hargaPerliterValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearHargaPerliter,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -175,6 +256,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.totalHargaValue = value;
                     },
+                    suffix: viewModel.totalHargaValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTotalHarga,
+                          ),
                   ),
                   const SizedBox(height: 18),
                   Container(
@@ -197,6 +288,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.totalBayarValue = value;
                     },
+                    suffix: viewModel.totalBayarValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTotalBayar,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -213,6 +314,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.nopolValue = value;
                     },
+                    suffix: viewModel.nopolValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearNopol,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -229,6 +340,17 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.pelangganValue = value;
                     },
+                    suffix: viewModel.pelangganValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel
+                                .onTapClearPelanggan, // onTapClearPelanggan,
+                          ),
                   ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
@@ -245,6 +367,16 @@ class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
                     onChanged: (value) {
                       viewModel.operatorValue = value;
                     },
+                    suffix: viewModel.operatorValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red,
+                            ),
+                            onPressed: viewModel.onTapClearOperator,
+                          ),
                   ),
                 ],
               )),

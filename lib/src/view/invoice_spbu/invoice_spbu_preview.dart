@@ -46,7 +46,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
               Container(
                 constraints: const BoxConstraints(
                   minWidth: 300,
-                  minHeight: 350,
+                  minHeight: 380,
                   maxWidth: 300,
                 ),
                 decoration: BoxDecoration(
@@ -72,7 +72,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       viewModel.noSpbuValue,
                       style: TextStyle(
                         fontSize: 40,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                         fontFamily: Font.snareDrum,
                         color: Colors.blue.darkest,
                       ),
@@ -332,10 +332,189 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 12),
+                      margin: const EdgeInsets.only(top: 12, bottom: 5),
                       height: 2.5,
                       color: Colors.blue.darkest,
                     ),
+                    Table(
+                      columnWidths: const {
+                        0: FixedColumnWidth(100),
+                        1: FixedColumnWidth(15),
+                        2: FixedColumnWidth(30),
+                        3: FixedColumnWidth(100),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Text(
+                              "Tunai",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              "Rp.",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              viewModel.totalBayarValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Table(
+                      columnWidths: const {
+                        0: FixedColumnWidth(100),
+                        1: FixedColumnWidth(15),
+                        2: FixedColumnWidth(140),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Text(
+                              "Nopol",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              viewModel.nopolValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            Text(
+                              "Pelanggan",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              viewModel.pelangganValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            Text(
+                              "Operator",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              viewModel.operatorValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: Font.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Text(
+                      "Terimakasih & Selamat Jalan",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: Font.telidonHvRegular,
+                        color: Colors.blue.darkest,
+                        height: 1.4,
+                      ),
+                    )
                   ],
                 ),
               ),
