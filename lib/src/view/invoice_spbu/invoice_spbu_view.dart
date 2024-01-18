@@ -30,30 +30,33 @@ class InvoiceSpbuView extends StatelessWidget {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () => viewModel.onTapClearAll(),
-                child: Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 5,
-                  ),
-                  constraints: const BoxConstraints(
-                    minWidth: 44,
-                  ),
-                  height: 44,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(
-                      color: Colors.grey[50],
-                      width: 1,
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () => viewModel.onTapClearAll(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 5,
                     ),
-                  ),
-                  child: const Text(
-                    "Reset Form",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                    constraints: const BoxConstraints(
+                      minWidth: 44,
+                    ),
+                    height: 44,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                        color: Colors.grey[50],
+                        width: 1,
+                      ),
+                    ),
+                    child: const Text(
+                      "Reset Form",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
