@@ -1,5 +1,6 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_invoice_generator_windows/src/view/invoice_toko/invoice_toko_forms.dart';
+import 'package:flutter_invoice_generator_windows/src/view/invoice_toko/invoice_toko_preview.dart';
 import 'package:flutter_invoice_generator_windows/src/view_model/invoice_toko/invoice_toko.dart';
 import 'package:flutter_invoice_generator_windows/src/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -68,7 +69,24 @@ class InvoiceTokoView extends StatelessWidget {
             ],
           ),
         ),
-        const InvoiceTokoForms()
+        Expanded(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const InvoiceTokoForms(),
+              Container(
+                width: 10,
+                height: double.infinity,
+                color: Colors.grey[30],
+              ),
+              const Flexible(
+                flex: 2,
+                child: InvoiceTokoPreview(),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

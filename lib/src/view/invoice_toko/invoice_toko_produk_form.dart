@@ -9,11 +9,19 @@ class InvoiceTokoProdukForm extends StatefulWidget {
     required this.index,
     required this.invoiceTokoProdukModel,
     required this.onPressedRemoveItem,
+    required this.onChangedQty,
+    required this.onChangedKeterangan,
+    required this.onChangedDiscount,
+    required this.onChangedTotal,
   });
 
   final int index;
   final InvoiceTokoProdukModel invoiceTokoProdukModel;
   final void Function()? onPressedRemoveItem;
+  final Function(String)? onChangedQty;
+  final Function(String)? onChangedKeterangan;
+  final Function(String)? onChangedDiscount;
+  final Function(String)? onChangedTotal;
 
   @override
   State<InvoiceTokoProdukForm> createState() => _InvoiceTokoProdukFormState();
@@ -54,8 +62,7 @@ class _InvoiceTokoProdukFormState extends State<InvoiceTokoProdukForm> {
                         label: "Qty",
                         placeholder: "Qty",
                         controller: widget.invoiceTokoProdukModel.qtyController,
-                        onChanged: (value) =>
-                            widget.invoiceTokoProdukModel.qty = value,
+                        onChanged: widget.onChangedQty,
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -66,8 +73,7 @@ class _InvoiceTokoProdukFormState extends State<InvoiceTokoProdukForm> {
                         placeholder: "Nama Produk",
                         controller:
                             widget.invoiceTokoProdukModel.keteranganController,
-                        onChanged: (value) =>
-                            widget.invoiceTokoProdukModel.keterangan = value,
+                        onChanged: widget.onChangedKeterangan,
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -77,8 +83,7 @@ class _InvoiceTokoProdukFormState extends State<InvoiceTokoProdukForm> {
                         placeholder: "Discount",
                         controller:
                             widget.invoiceTokoProdukModel.discountController,
-                        onChanged: (value) =>
-                            widget.invoiceTokoProdukModel.discount = value,
+                        onChanged: widget.onChangedDiscount,
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -89,8 +94,7 @@ class _InvoiceTokoProdukFormState extends State<InvoiceTokoProdukForm> {
                         placeholder: "Jumlah",
                         controller:
                             widget.invoiceTokoProdukModel.totalController,
-                        onChanged: (value) =>
-                            widget.invoiceTokoProdukModel.total = value,
+                        onChanged: widget.onChangedTotal,
                       ),
                     ),
                     const SizedBox(width: 10),

@@ -18,8 +18,8 @@ class InvoiceTokoViewModel extends ChangeNotifier {
 
     listInvoiceTokoProdukForm.add(InvoiceTokoProdukModel());
     listInvoiceTokoProdukForm[0].qtyController.text = '1';
-    listInvoiceTokoProdukForm[0].keteranganController.text = 'Produk 1';
-    listInvoiceTokoProdukForm[0].discountController.text = '0%';
+    listInvoiceTokoProdukForm[0].keteranganController.text = 'Nama Produk';
+    listInvoiceTokoProdukForm[0].discountController.text = '0';
     listInvoiceTokoProdukForm[0].totalController.text = '0';
   }
 
@@ -62,7 +62,7 @@ class InvoiceTokoViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void onTapClearNoInvoice() {
+  void onTapClearKodeInvoice() {
     kodeInvoiceController.clear();
     kodeInvoiceValue = '';
     notifyListeners();
@@ -101,13 +101,38 @@ class InvoiceTokoViewModel extends ChangeNotifier {
 
   /// NOTE: Add Invoice Toko Produk Form
   void addInvoiceTokoProdukModel() {
-    listInvoiceTokoProdukForm.add(InvoiceTokoProdukModel());
+    listInvoiceTokoProdukForm.add(InvoiceTokoProdukModel(
+      qty: '1',
+      keterangan: 'Nama Produk',
+      discount: '0',
+      total: '0',
+    ));
     notifyListeners();
   }
 
   /// NOTE: Remove Invoice Toko Produk Form
   void removeInvoiceTokoProdukModel(int index) {
     listInvoiceTokoProdukForm.removeAt(index);
+    notifyListeners();
+  }
+
+  void onChangeQty(int index, String value) {
+    listInvoiceTokoProdukForm[index].qty = value;
+    notifyListeners();
+  }
+
+  void onChangeKeterangan(int index, String value) {
+    listInvoiceTokoProdukForm[index].keterangan = value;
+    notifyListeners();
+  }
+
+  void onChangeDiscount(int index, String value) {
+    listInvoiceTokoProdukForm[index].discount = value;
+    notifyListeners();
+  }
+
+  void onChangeTotal(int index, String value) {
+    listInvoiceTokoProdukForm[index].total = value;
     notifyListeners();
   }
 

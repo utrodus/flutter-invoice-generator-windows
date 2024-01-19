@@ -12,6 +12,7 @@ class InvoiceTokoForms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: 3,
       child: SingleChildScrollView(
         padding: const EdgeInsets.only(
           top: 20,
@@ -47,7 +48,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearNamaToko(),
                         ),
                 ),
                 const SizedBox(height: 14),
@@ -73,7 +74,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearAlamatToko(),
                         ),
                 ),
                 const SizedBox(height: 14),
@@ -99,7 +100,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearKodeInvoice(),
                         ),
                 ),
                 const SizedBox(height: 14),
@@ -125,7 +126,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearNamaInvoice(),
                         ),
                 ),
                 const SizedBox(height: 14),
@@ -151,7 +152,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearNamaMeja(),
                         ),
                 ),
                 const SizedBox(height: 18),
@@ -165,6 +166,26 @@ class InvoiceTokoForms extends StatelessWidget {
                               viewModel.removeInvoiceTokoProdukModel(
                             viewModel.listInvoiceTokoProdukForm.indexOf(e),
                           ),
+                          onChangedQty: (value) {
+                            viewModel.onChangeQty(
+                                viewModel.listInvoiceTokoProdukForm.indexOf(e),
+                                value);
+                          },
+                          onChangedKeterangan: (value) {
+                            viewModel.onChangeKeterangan(
+                                viewModel.listInvoiceTokoProdukForm.indexOf(e),
+                                value);
+                          },
+                          onChangedDiscount: (value) {
+                            viewModel.onChangeDiscount(
+                                viewModel.listInvoiceTokoProdukForm.indexOf(e),
+                                value);
+                          },
+                          onChangedTotal: (value) {
+                            viewModel.onChangeTotal(
+                                viewModel.listInvoiceTokoProdukForm.indexOf(e),
+                                value);
+                          },
                         ))
                     .toList(),
                 const SizedBox(height: 6),
@@ -215,7 +236,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearJumlah(),
                         ),
                 ),
 
@@ -243,7 +264,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearDiscount(),
                         ),
                 ),
 
@@ -271,7 +292,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearVoucher(),
                         ),
                 ),
 
@@ -299,7 +320,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearServiceCharge(),
                         ),
                 ),
 
@@ -327,7 +348,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearPajak(),
                         ),
                 ),
 
@@ -355,7 +376,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearCharge(),
                         ),
                 ),
 
@@ -383,7 +404,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearPembulatan(),
                         ),
                 ),
 
@@ -411,7 +432,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearGrandTotal(),
                         ),
                 ),
 
@@ -438,7 +459,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearBayarTunai(),
                         ),
                 ),
 
@@ -466,7 +487,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearCard(),
                         ),
                 ),
 
@@ -495,7 +516,7 @@ class InvoiceTokoForms extends StatelessWidget {
                             size: 20,
                             color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearKembalian(),
                         ),
                 ),
 
@@ -519,11 +540,12 @@ class InvoiceTokoForms extends StatelessWidget {
                   suffix: viewModel.namaKasirValue.isEmpty
                       ? null
                       : IconButton(
-                          icon: const Icon(
+                          icon: Icon(
                             CupertinoIcons.clear_circled_solid,
+                            color: Colors.red.lighter,
                             size: 20,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearNamaKasir(),
                         ),
                 ),
 
@@ -547,11 +569,12 @@ class InvoiceTokoForms extends StatelessWidget {
                   suffix: viewModel.namaToko2Value.isEmpty
                       ? null
                       : IconButton(
-                          icon: const Icon(
+                          icon: Icon(
                             CupertinoIcons.clear_circled_solid,
                             size: 20,
+                            color: Colors.red.lighter,
                           ),
-                          onPressed: () {},
+                          onPressed: () => viewModel.onTapClearNamaToko2(),
                         ),
                 ),
               ],
