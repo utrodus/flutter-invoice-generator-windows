@@ -69,7 +69,7 @@ class SideNavPaneView extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            body: const InvoiceTokoForms(),
+            body: const InvoiceTokoView(),
           ),
         ],
       ),

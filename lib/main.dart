@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SizeNavPaneViewModel()),
         ChangeNotifierProvider(
             create: (_) => InvoiceSpbuViewModel()..initForm()),
+        ChangeNotifierProvider(
+            create: (_) => InvoiceTokoViewModel()..initForm()),
       ],
       child: const FluentApp(
         title: 'Invoice Generator',

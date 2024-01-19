@@ -4,14 +4,9 @@ import 'package:flutter_invoice_generator_windows/src/view_model/invoice_spbu/in
 import 'package:flutter_invoice_generator_windows/src/widgets/text_box_with_label.dart';
 import 'package:provider/provider.dart';
 
-class InvoiceSpbuForms extends StatefulWidget {
-  const InvoiceSpbuForms({super.key});
+class InvoiceSpbuForms extends StatelessWidget {
+  const InvoiceSpbuForms({Key? key}) : super(key: key);
 
-  @override
-  State<InvoiceSpbuForms> createState() => _InvoiceSpbuFormsState();
-}
-
-class _InvoiceSpbuFormsState extends State<InvoiceSpbuForms> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
