@@ -15,6 +15,34 @@ class InvoiceTokoViewModel extends ChangeNotifier {
     namaInvoiceController.text = namaInvoiceValue;
     namaMejaValue = 'Nama Meja';
     namaMejaController.text = namaMejaValue;
+    jumlahValue = '0';
+    jumlahController.text = jumlahValue;
+    discountValue = '0';
+    discountController.text = discountValue;
+    voucherValue = '0';
+    voucherController.text = voucherValue;
+    serviceChargeValue = '0';
+    serviceChargeController.text = serviceChargeValue;
+    pajakValue = '0';
+    pajakController.text = pajakValue;
+    subTotalValue = '0';
+    subTotalController.text = subTotalValue;
+    chargeValue = '0';
+    chargeController.text = chargeValue;
+    pembulatanValue = '0';
+    pembulatanController.text = pembulatanValue;
+    grandTotalValue = '0';
+    grandTotalController.text = grandTotalValue;
+    bayarTunaiValue = '0';
+    bayarTunaiController.text = bayarTunaiValue;
+    cardValue = '0';
+    cardController.text = cardValue;
+    kembalianValue = '0';
+    kembalianController.text = kembalianValue;
+    namaKasirValue = 'Nama Kasir';
+    namaKasirController.text = namaKasirValue;
+    namaToko2Value = 'Nama Toko';
+    namaToko2Controller.text = namaToko2Value;
 
     listInvoiceTokoProdukForm.add(InvoiceTokoProdukModel());
     listInvoiceTokoProdukForm[0].qtyController.text = '1';
@@ -203,6 +231,21 @@ class InvoiceTokoViewModel extends ChangeNotifier {
   void onTapClearPajak() {
     pajakController.clear();
     pajakValue = '';
+    notifyListeners();
+  }
+
+  /// total perhitungan dibawah tax
+  final TextEditingController subTotalController = TextEditingController();
+  String _subTotalValue = '';
+  String get subTotalValue => _subTotalValue;
+  set subTotalValue(String value) {
+    _subTotalValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearSubTotal() {
+    subTotalController.clear();
+    subTotalValue = '';
     notifyListeners();
   }
 

@@ -335,8 +335,8 @@ class InvoiceTokoForms extends StatelessWidget {
                     ),
                   ),
                   controller: viewModel.pajakController,
-                  label: "Pajak",
-                  placeholder: "Masukkan Pajak",
+                  label: "Tax (10%)",
+                  placeholder: "Masukkan Tax",
                   onChanged: (value) {
                     viewModel.pajakValue = value;
                   },
@@ -349,6 +349,35 @@ class InvoiceTokoForms extends StatelessWidget {
                             color: Colors.red.lighter,
                           ),
                           onPressed: () => viewModel.onTapClearPajak(),
+                        ),
+                ),
+
+                const SizedBox(height: 14),
+
+                /// subtotal
+                TextBoxWithLabel(
+                  prefix: const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Icon(
+                      FluentIcons.table_total_row,
+                      size: 17,
+                    ),
+                  ),
+                  controller: viewModel.subTotalController,
+                  label: "Subtotal (Dibawah Tax 10%)",
+                  placeholder: "Masukkan Subtotal",
+                  onChanged: (value) {
+                    viewModel.subTotalValue = value;
+                  },
+                  suffix: viewModel.subTotalValue.isEmpty
+                      ? null
+                      : IconButton(
+                          icon: Icon(
+                            CupertinoIcons.clear_circled_solid,
+                            color: Colors.red.lighter,
+                            size: 20,
+                          ),
+                          onPressed: () => viewModel.onTapClearSubTotal(),
                         ),
                 ),
 
