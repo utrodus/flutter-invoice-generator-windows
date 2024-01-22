@@ -1,4 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter_invoice_generator_windows/src/services/printer/printer.dart';
 
 class InvoiceSpbuViewModel extends ChangeNotifier {
   void initForm() {
@@ -225,6 +226,21 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     pelangganValue = '';
     operatorController.clear();
     operatorValue = '';
+    notifyListeners();
+  }
+
+  /// print invoice
+  PrinterServices printerService = PrinterServices();
+  bool isPrintPreview = false;
+
+  void onTapPrintPreview() {
+    isPrintPreview = true;
+    notifyListeners();
+  }
+
+  void onTapBackButton() {
+    isPrintPreview = false;
+
     notifyListeners();
   }
 }

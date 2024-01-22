@@ -347,7 +347,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -392,7 +392,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -434,7 +434,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -476,7 +476,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -518,7 +518,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -560,7 +560,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   "",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -602,7 +602,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),
@@ -644,7 +644,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                                   ":",
                                   style: TextStyle(
                                     fontSize: 13,
-                                    fontFamily: Font.telidonHvRegular,
+                                    fontFamily: FontFamily.telidonHvRegular,
                                     color: Colors.blue.darkest,
                                     height: 1.4,
                                   ),

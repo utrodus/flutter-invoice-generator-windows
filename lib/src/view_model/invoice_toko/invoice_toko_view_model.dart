@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_invoice_generator_windows/src/models/models.dart';
+import 'package:flutter_invoice_generator_windows/src/services/printer/printer.dart';
 
 class InvoiceTokoViewModel extends ChangeNotifier {
   /// form key
@@ -125,7 +126,14 @@ class InvoiceTokoViewModel extends ChangeNotifier {
   }
 
   /// NOTE: Invoice Toko Produk Form
-  List<InvoiceTokoProdukModel> listInvoiceTokoProdukForm = [];
+  List<InvoiceTokoProdukModel> listInvoiceTokoProdukForm = [
+    InvoiceTokoProdukModel(
+      qty: '1',
+      keterangan: 'Nama Produk',
+      discount: '0',
+      total: '0',
+    ),
+  ];
 
   /// NOTE: Add Invoice Toko Produk Form
   void addInvoiceTokoProdukModel() {
@@ -358,6 +366,20 @@ class InvoiceTokoViewModel extends ChangeNotifier {
   void onTapClearNamaToko2() {
     namaToko2Controller.clear();
     namaToko2Value = '';
+    notifyListeners();
+  }
+
+  PrinterServices printerService = PrinterServices();
+  bool isPrintPreview = false;
+
+  void onTapPrintTokoPreview() {
+    isPrintPreview = true;
+    notifyListeners();
+  }
+
+  void onTapBackButton() {
+    isPrintPreview = false;
+
     notifyListeners();
   }
 }

@@ -6,9 +6,9 @@ import 'package:pdf/widgets.dart';
 
 class PrinterServices {
   /// generate pdf with multi page for long content data, like invoice with table
-  Future<Uint8List> generateMultiPagePdf({
+  Future<Uint8List> generateSinglePagePdf({
     required PdfPageFormat format,
-    required List<Widget> Function(Context) build,
+    required Widget Function(Context) build,
   }) async {
     final doc = pw.Document(
       version: PdfVersion.pdf_1_5,
@@ -16,7 +16,7 @@ class PrinterServices {
     );
 
     doc.addPage(
-      pw.MultiPage(
+      pw.Page(
         pageFormat: format,
         build: build,
       ),

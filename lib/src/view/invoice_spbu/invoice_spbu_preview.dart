@@ -73,7 +73,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        fontFamily: Font.snareDrum,
+                        fontFamily: FontFamily.snareDrum,
                         color: Colors.blue.darkest,
                       ),
                     ),
@@ -82,7 +82,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        fontFamily: Font.telidonHvRegular,
+                        fontFamily: FontFamily.telidonHvRegular,
                         color: Colors.blue.darkest,
                         height: 1.2,
                       ),
@@ -92,7 +92,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        fontFamily: Font.telidonHvRegular,
+                        fontFamily: FontFamily.telidonHvRegular,
                         color: Colors.blue.darkest,
                         height: 1.2,
                       ),
@@ -102,7 +102,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        fontFamily: Font.telidonHvRegular,
+                        fontFamily: FontFamily.telidonHvRegular,
                         color: Colors.blue.darkest,
                         height: 1.2,
                       ),
@@ -126,7 +126,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                               ),
                             ),
@@ -135,7 +135,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                               ),
                             ),
@@ -144,7 +144,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                               ),
                             ),
@@ -157,7 +157,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -167,7 +167,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -177,7 +177,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -201,7 +201,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -211,7 +211,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -221,7 +221,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -231,7 +231,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -246,7 +246,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -256,7 +256,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -266,7 +266,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -276,7 +276,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -291,7 +291,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -301,7 +301,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -311,7 +311,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -321,7 +321,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.5,
                               ),
@@ -351,7 +351,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -361,7 +361,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -371,7 +371,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -381,7 +381,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -408,7 +408,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -418,7 +418,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -428,7 +428,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -442,7 +442,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -452,7 +452,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -462,7 +462,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -476,7 +476,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -486,7 +486,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -496,7 +496,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: Font.telidonHvRegular,
+                                fontFamily: FontFamily.telidonHvRegular,
                                 color: Colors.blue.darkest,
                                 height: 1.4,
                               ),
@@ -510,7 +510,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        fontFamily: Font.telidonHvRegular,
+                        fontFamily: FontFamily.telidonHvRegular,
                         color: Colors.blue.darkest,
                         height: 1.4,
                       ),
