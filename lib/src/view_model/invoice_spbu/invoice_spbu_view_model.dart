@@ -1,4 +1,7 @@
+import 'dart:typed_data';
+
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_invoice_generator_windows/src/services/printer/printer.dart';
 
 class InvoiceSpbuViewModel extends ChangeNotifier {
@@ -233,7 +236,18 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
   PrinterServices printerService = PrinterServices();
   bool isPrintPreview = false;
 
-  void onTapPrintPreview() {
+  ByteData? fontSnareDrum;
+  ByteData? fontTelidonHvRegular;
+
+  Future<void> loadFont() async {
+    fontSnareDrum = await rootBundle.load('assets/snare_drum.ttf');
+    fontTelidonHvRegular =
+        await rootBundle.load('assets/telidon_hv_regular.ttf');
+    notifyListeners();
+  }
+
+  void onTapPrintPreview() async {
+    await loadFont();
     isPrintPreview = true;
     notifyListeners();
   }

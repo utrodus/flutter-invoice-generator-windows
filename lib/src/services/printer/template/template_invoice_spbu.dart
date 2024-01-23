@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
@@ -17,10 +19,12 @@ class TemplateInvoiceSpbu {
     required String nopolValue,
     required String pelangganValue,
     required String operatorValue,
+    required ByteData fontSnaredrum,
+    required ByteData fontTelidonHvRegular,
   }) {
     return pw.Padding(
         padding: const pw.EdgeInsets.symmetric(
-          horizontal: 23,
+          horizontal: 20,
         ),
         child: pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -28,28 +32,32 @@ class TemplateInvoiceSpbu {
             pw.Text(
               noSpbuValue,
               style: pw.TextStyle(
-                fontSize: 15,
+                fontSize: 25,
                 fontWeight: pw.FontWeight.bold,
+                font: pw.Font.ttf(fontSnaredrum),
               ),
             ),
             pw.Text(
               alamatSpbuValue,
-              style: const pw.TextStyle(
-                fontSize: 8,
+              style: pw.TextStyle(
+                fontSize: 11,
+                font: pw.Font.ttf(fontTelidonHvRegular),
                 height: 1.2,
               ),
             ),
             pw.Text(
               noTelpValue,
-              style: const pw.TextStyle(
-                fontSize: 8,
+              style: pw.TextStyle(
+                fontSize: 11,
+                font: pw.Font.ttf(fontTelidonHvRegular),
                 height: 1.2,
               ),
             ),
             pw.Text(
               tglInvoiceValue,
-              style: const pw.TextStyle(
-                fontSize: 8,
+              style: pw.TextStyle(
+                fontSize: 10,
+                font: pw.Font.ttf(fontTelidonHvRegular),
                 height: 1.2,
               ),
             ),
@@ -59,30 +67,33 @@ class TemplateInvoiceSpbu {
               color: PdfColors.black,
             ),
             pw.Table(
-              columnWidths: const {
-                0: pw.FixedColumnWidth(110),
-                1: pw.FixedColumnWidth(10),
-                2: pw.FixedColumnWidth(150),
+              columnWidths: {
+                0: const pw.FixedColumnWidth(110),
+                1: const pw.FixedColumnWidth(15),
+                2: const pw.FixedColumnWidth(150),
               },
               children: [
                 pw.TableRow(
                   children: [
                     pw.Text(
                       "No. Nota",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                       ),
                     ),
                     pw.Text(
                       noInvoiceValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                       ),
                     ),
                   ],
@@ -92,22 +103,25 @@ class TemplateInvoiceSpbu {
                   children: [
                     pw.Text(
                       "Jenis BBM",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       jenisBbmValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
@@ -117,40 +131,44 @@ class TemplateInvoiceSpbu {
               ],
             ),
             pw.Table(
-              columnWidths: const {
-                0: pw.FixedColumnWidth(100),
-                1: pw.FixedColumnWidth(15),
-                2: pw.FixedColumnWidth(30),
-                3: pw.FixedColumnWidth(100),
+              columnWidths: {
+                0: const pw.FixedColumnWidth(100),
+                1: const pw.FixedColumnWidth(15),
+                2: const pw.FixedColumnWidth(30),
+                3: const pw.FixedColumnWidth(100),
               },
               children: [
                 pw.TableRow(
                   children: [
                     pw.Text(
                       "Total Liter",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       "",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.5,
                       ),
                     ),
                     pw.Text(
                       totalLiterValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                       textAlign: pw.TextAlign.right,
@@ -162,29 +180,33 @@ class TemplateInvoiceSpbu {
                   children: [
                     pw.Text(
                       "Harga/liter",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       "Rp.",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.5,
                       ),
                     ),
                     pw.Text(
                       hargaPerliterValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                       textAlign: pw.TextAlign.right,
@@ -196,30 +218,37 @@ class TemplateInvoiceSpbu {
                   children: [
                     pw.Text(
                       "Total",
-                      style: const pw.TextStyle(
-                        fontSize: 10,
-                        height: 1.5,
-                      ),
+                      style: pw.TextStyle(
+                          fontSize: 14,
+                          height: 1.5,
+                          fontWeight: pw.FontWeight.bold,
+                          font: pw.Font.ttf(fontTelidonHvRegular)),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 10,
+                      style: pw.TextStyle(
+                        fontSize: 14,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.5,
+                        fontWeight: pw.FontWeight.bold,
                       ),
                     ),
                     pw.Text(
                       "Rp.",
-                      style: const pw.TextStyle(
-                        fontSize: 10,
+                      style: pw.TextStyle(
+                        fontSize: 14,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.5,
+                        fontWeight: pw.FontWeight.bold,
                       ),
                     ),
                     pw.Text(
                       totalHargaValue,
-                      style: const pw.TextStyle(
-                        fontSize: 10,
+                      style: pw.TextStyle(
+                        fontSize: 14,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.5,
+                        fontWeight: pw.FontWeight.bold,
                       ),
                       textAlign: pw.TextAlign.right,
                     ),
@@ -234,40 +263,44 @@ class TemplateInvoiceSpbu {
               color: PdfColors.black,
             ),
             pw.Table(
-              columnWidths: const {
-                0: pw.FixedColumnWidth(100),
-                1: pw.FixedColumnWidth(15),
-                2: pw.FixedColumnWidth(30),
-                3: pw.FixedColumnWidth(100),
+              columnWidths: {
+                0: const pw.FixedColumnWidth(100),
+                1: const pw.FixedColumnWidth(15),
+                2: const pw.FixedColumnWidth(30),
+                3: const pw.FixedColumnWidth(100),
               },
               children: [
                 pw.TableRow(
                   children: [
                     pw.Text(
                       "Tunai",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       "Rp.",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       totalBayarValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                       textAlign: pw.TextAlign.right,
@@ -280,32 +313,35 @@ class TemplateInvoiceSpbu {
               height: 20,
             ),
             pw.Table(
-              columnWidths: const {
-                0: pw.FixedColumnWidth(110),
-                1: pw.FixedColumnWidth(15),
-                2: pw.FixedColumnWidth(140),
+              columnWidths: {
+                0: const pw.FixedColumnWidth(110),
+                1: const pw.FixedColumnWidth(15),
+                2: const pw.FixedColumnWidth(140),
               },
               children: [
                 pw.TableRow(
                   children: [
                     pw.Text(
                       "Nopol",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       nopolValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
@@ -316,22 +352,25 @@ class TemplateInvoiceSpbu {
                   children: [
                     pw.Text(
                       "Pelanggan",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       pelangganValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
@@ -342,22 +381,25 @@ class TemplateInvoiceSpbu {
                   children: [
                     pw.Text(
                       "Operator",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       ":",
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
                     pw.Text(
                       operatorValue,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
                         height: 1.4,
                       ),
                     ),
@@ -371,7 +413,8 @@ class TemplateInvoiceSpbu {
             pw.Text(
               "Terimakasih & Selamat Jalan",
               style: pw.TextStyle(
-                fontSize: 8,
+                fontSize: 11,
+                font: pw.Font.ttf(fontTelidonHvRegular),
                 fontWeight: pw.FontWeight.bold,
                 height: 1.4,
               ),

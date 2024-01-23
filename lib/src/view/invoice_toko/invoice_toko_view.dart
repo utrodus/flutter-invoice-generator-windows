@@ -36,7 +36,7 @@ class InvoiceTokoView extends StatelessWidget {
                     MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
-                        onTap: () => viewModel.onTapClearAll(),
+                        onTap: () => viewModel.initForm(),
                         child: Container(
                           alignment: Alignment.center,
                           padding: const EdgeInsets.symmetric(
