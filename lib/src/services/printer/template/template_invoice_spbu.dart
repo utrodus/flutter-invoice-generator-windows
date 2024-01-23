@@ -20,7 +20,7 @@ class TemplateInvoiceSpbu {
   }) {
     return pw.Padding(
         padding: const pw.EdgeInsets.symmetric(
-          horizontal: 25,
+          horizontal: 23,
         ),
         child: pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,

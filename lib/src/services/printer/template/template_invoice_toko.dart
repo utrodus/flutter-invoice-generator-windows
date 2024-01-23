@@ -27,7 +27,7 @@ class TemplateInvoiceToko {
     required List<InvoiceTokoProdukModel> listInvoiceTokoProdukForm,
   }) {
     return pw.Container(
-      padding: const pw.EdgeInsets.all(8),
+      padding: const pw.EdgeInsets.symmetric(horizontal: 15, vertical: 8),
       child: pw.Column(
         crossAxisAlignment: pw.CrossAxisAlignment.start,
         children: [
@@ -132,16 +132,13 @@ class TemplateInvoiceToko {
                   ),
                 ),
                 pw.Expanded(
-                  flex: 3,
-                  child: pw.ConstrainedBox(
-                    constraints: const pw.BoxConstraints(maxWidth: 30),
-                    child: pw.Text(
-                      'Jumlah',
-                      style: const pw.TextStyle(
-                        fontSize: 8,
-                      ),
-                      textAlign: pw.TextAlign.right,
+                  flex: 5,
+                  child: pw.Text(
+                    'Jumlah',
+                    style: const pw.TextStyle(
+                      fontSize: 8,
                     ),
+                    textAlign: pw.TextAlign.right,
                   ),
                 ),
               ]),
@@ -165,7 +162,6 @@ class TemplateInvoiceToko {
                     ),
                   ),
                 ),
-                pw.SizedBox(width: 15),
                 pw.Expanded(
                   flex: 7,
                   child: pw.ConstrainedBox(
@@ -178,7 +174,6 @@ class TemplateInvoiceToko {
                     ),
                   ),
                 ),
-                pw.SizedBox(width: 5),
                 pw.Expanded(
                   flex: 2,
                   child: pw.ConstrainedBox(
@@ -191,18 +186,14 @@ class TemplateInvoiceToko {
                     ),
                   ),
                 ),
-                pw.SizedBox(width: 15),
                 pw.Expanded(
-                  flex: 2,
-                  child: pw.ConstrainedBox(
-                    constraints: const pw.BoxConstraints(maxWidth: 30),
-                    child: pw.Text(
-                      e.total,
-                      style: const pw.TextStyle(
-                        fontSize: 8,
-                      ),
-                      textAlign: pw.TextAlign.right,
+                  flex: 3,
+                  child: pw.Text(
+                    e.total,
+                    style: const pw.TextStyle(
+                      fontSize: 8,
                     ),
+                    textAlign: pw.TextAlign.right,
                   ),
                 ),
               ],
