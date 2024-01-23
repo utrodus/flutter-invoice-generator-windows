@@ -73,7 +73,7 @@ class InvoiceSpbuPrintPreview extends StatelessWidget {
           ),
           Expanded(
             child: PdfPreview(
-              maxPageWidth: 500,
+              maxPageWidth: 700,
               canDebug: false,
               canChangeOrientation: false,
               canChangePageFormat: true,

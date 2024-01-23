@@ -100,7 +100,8 @@ class InvoiceTokoPrintPreview extends StatelessWidget {
                   kembalianValue: viewModel.kembalianValue,
                   namaKasirValue: viewModel.namaKasirValue,
                   namaToko2Value: viewModel.namaToko2Value,
-                  listInvoiceTokoProdukForm: [],
+                  listInvoiceTokoProdukForm:
+                      viewModel.listInvoiceTokoProdukForm,
                 ),
               ),
             ),

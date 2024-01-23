@@ -33,9 +33,8 @@ class TemplateInvoiceToko {
         children: [
           pw.Text(
             namaTokoValue,
-            style: pw.TextStyle(
-              fontSize: 15,
-              fontWeight: pw.FontWeight.bold,
+            style: const pw.TextStyle(
+              fontSize: 8,
             ),
           ),
           pw.Text(
@@ -44,7 +43,18 @@ class TemplateInvoiceToko {
               fontSize: 8,
             ),
           ),
-          pw.Divider(),
+          pw.SizedBox(height: 5),
+          pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            pw.Container(
+              height: 1,
+              color: PdfColors.black,
+            ),
+            pw.Container(
+              margin: const pw.EdgeInsets.symmetric(vertical: 1),
+              color: PdfColors.black,
+            ),
+          ]),
+          pw.SizedBox(height: 5),
           pw.Align(
             alignment: pw.Alignment.centerRight,
             child: pw.Text(
@@ -62,15 +72,15 @@ class TemplateInvoiceToko {
             alignment: pw.Alignment.center,
             child: pw.Text(
               namaInvoiceValue,
-              style: const pw.TextStyle(
+              style: pw.TextStyle(
                 fontSize: 10,
                 letterSpacing: 0.2,
-                height: 1.2,
+                height: 1.5,
+                fontWeight: pw.FontWeight.bold,
               ),
               textAlign: pw.TextAlign.center,
             ),
           ),
-          pw.SizedBox(height: 5),
           pw.Align(
             alignment: pw.Alignment.center,
             child: pw.Text(
@@ -78,7 +88,6 @@ class TemplateInvoiceToko {
               style: const pw.TextStyle(
                 fontSize: 8,
                 letterSpacing: 0.2,
-                height: 1.2,
               ),
               textAlign: pw.TextAlign.center,
             ),
@@ -136,10 +145,10 @@ class TemplateInvoiceToko {
                   ),
                 ),
               ]),
-          pw.Divider(),
           pw.Container(
             margin: const pw.EdgeInsets.symmetric(vertical: 3),
-            height: 1.5,
+            height: 0.5,
+            color: PdfColors.black,
           ),
           ...listInvoiceTokoProdukForm.map(
             (e) => pw.Row(
@@ -199,8 +208,11 @@ class TemplateInvoiceToko {
               ],
             ),
           ),
-
-          pw.Divider(),
+          pw.Container(
+            margin: const pw.EdgeInsets.symmetric(vertical: 3),
+            height: 0.5,
+            color: PdfColors.black,
+          ),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -278,6 +290,7 @@ class TemplateInvoiceToko {
               ),
             ],
           ),
+          pw.SizedBox(height: 2),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -316,6 +329,7 @@ class TemplateInvoiceToko {
               ),
             ],
           ),
+          pw.SizedBox(height: 2),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -354,6 +368,7 @@ class TemplateInvoiceToko {
               ),
             ],
           ),
+          pw.SizedBox(height: 2),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -468,6 +483,7 @@ class TemplateInvoiceToko {
               ),
             ],
           ),
+          pw.SizedBox(height: 2),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -584,6 +600,7 @@ class TemplateInvoiceToko {
               ),
             ],
           ),
+          pw.SizedBox(height: 2),
           pw.Table(
             columnWidths: const {
               0: pw.FixedColumnWidth(100),
@@ -662,7 +679,7 @@ class TemplateInvoiceToko {
           ),
           pw.Container(
             margin: const pw.EdgeInsets.symmetric(vertical: 3),
-            height: 1.5,
+            height: 1.2,
             color: PdfColors.black,
           ),
 
@@ -673,14 +690,7 @@ class TemplateInvoiceToko {
               height: 1.4,
             ),
           ),
-
-          pw.Container(
-            margin: const pw.EdgeInsets.only(top: 6, bottom: 10),
-            height: 1.5,
-            color: PdfColors.black,
-          ),
-
-          // Terimakasih
+          pw.SizedBox(height: 10),
           pw.Center(
             child: pw.Text(
               "####   Terimakasih atas kunjungan anda   ####",

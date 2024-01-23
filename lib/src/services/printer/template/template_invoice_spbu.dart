@@ -20,7 +20,7 @@ class TemplateInvoiceSpbu {
   }) {
     return pw.Padding(
         padding: const pw.EdgeInsets.symmetric(
-          horizontal: 8,
+          horizontal: 25,
         ),
         child: pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -56,6 +56,7 @@ class TemplateInvoiceSpbu {
             pw.Container(
               margin: const pw.EdgeInsets.symmetric(vertical: 12),
               height: 1.5,
+              color: PdfColors.black,
             ),
             pw.Table(
               columnWidths: const {
@@ -196,28 +197,28 @@ class TemplateInvoiceSpbu {
                     pw.Text(
                       "Total",
                       style: const pw.TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         height: 1.5,
                       ),
                     ),
                     pw.Text(
                       ":",
                       style: const pw.TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         height: 1.5,
                       ),
                     ),
                     pw.Text(
                       "Rp.",
                       style: const pw.TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         height: 1.5,
                       ),
                     ),
                     pw.Text(
                       totalHargaValue,
                       style: const pw.TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         height: 1.5,
                       ),
                       textAlign: pw.TextAlign.right,
@@ -228,8 +229,9 @@ class TemplateInvoiceSpbu {
               ],
             ),
             pw.Container(
-              margin: const pw.EdgeInsets.only(top: 12, bottom: 5),
-              height: 2.5,
+              margin: const pw.EdgeInsets.symmetric(vertical: 12),
+              height: 1.5,
+              color: PdfColors.black,
             ),
             pw.Table(
               columnWidths: const {
