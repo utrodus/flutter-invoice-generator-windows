@@ -16,6 +16,7 @@ class TemplateInvoiceSpbu {
     required String hargaPerliterValue,
     required String totalHargaValue,
     required String totalBayarValue,
+    required String totalKembalianValue,
     required String nopolValue,
     required String pelangganValue,
     required String operatorValue,
@@ -24,7 +25,7 @@ class TemplateInvoiceSpbu {
   }) {
     return pw.Padding(
         padding: const pw.EdgeInsets.symmetric(
-          horizontal: 20,
+          horizontal: 15,
         ),
         child: pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -63,7 +64,7 @@ class TemplateInvoiceSpbu {
             ),
             pw.Container(
               margin: const pw.EdgeInsets.symmetric(vertical: 12),
-              height: 1.5,
+              height: 1,
               color: PdfColors.black,
             ),
             pw.Table(
@@ -141,44 +142,6 @@ class TemplateInvoiceSpbu {
                 pw.TableRow(
                   children: [
                     pw.Text(
-                      "Total Liter",
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                    ),
-                    pw.Text(
-                      ":",
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                    ),
-                    pw.Text(
-                      "",
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.5,
-                      ),
-                    ),
-                    pw.Text(
-                      totalLiterValue,
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                      textAlign: pw.TextAlign.right,
-                    ),
-                  ],
-                ),
-                pw.TableRow(children: [pw.SizedBox(height: 1)]),
-                pw.TableRow(
-                  children: [
-                    pw.Text(
                       "Harga/liter",
                       style: pw.TextStyle(
                         fontSize: 11,
@@ -217,9 +180,47 @@ class TemplateInvoiceSpbu {
                 pw.TableRow(
                   children: [
                     pw.Text(
+                      "Liter",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                    ),
+                    pw.Text(
+                      ":",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                    ),
+                    pw.Text(
+                      "",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.5,
+                      ),
+                    ),
+                    pw.Text(
+                      totalLiterValue,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                      textAlign: pw.TextAlign.right,
+                    ),
+                  ],
+                ),
+                pw.TableRow(children: [pw.SizedBox(height: 1)]),
+                pw.TableRow(
+                  children: [
+                    pw.Text(
                       "Total",
                       style: pw.TextStyle(
-                          fontSize: 14,
+                          fontSize: 15,
                           height: 1.5,
                           fontWeight: pw.FontWeight.bold,
                           font: pw.Font.ttf(fontTelidonHvRegular)),
@@ -257,10 +258,22 @@ class TemplateInvoiceSpbu {
                 pw.TableRow(children: [pw.SizedBox(height: 1)]),
               ],
             ),
+            pw.SizedBox(
+              height: 5,
+            ),
             pw.Container(
-              margin: const pw.EdgeInsets.symmetric(vertical: 12),
-              height: 1.5,
+              height: 1,
               color: PdfColors.black,
+            ),
+            pw.SizedBox(
+              height: 0.8,
+            ),
+            pw.Container(
+              height: 1,
+              color: PdfColors.black,
+            ),
+            pw.SizedBox(
+              height: 5,
             ),
             pw.Table(
               columnWidths: {
@@ -309,6 +322,53 @@ class TemplateInvoiceSpbu {
                 ),
               ],
             ),
+            pw.Table(
+              columnWidths: {
+                0: const pw.FixedColumnWidth(100),
+                1: const pw.FixedColumnWidth(15),
+                2: const pw.FixedColumnWidth(30),
+                3: const pw.FixedColumnWidth(100),
+              },
+              children: [
+                pw.TableRow(
+                  children: [
+                    pw.Text(
+                      "Kembalian",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                    ),
+                    pw.Text(
+                      ":",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                    ),
+                    pw.Text(
+                      "Rp.",
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                    ),
+                    pw.Text(
+                      totalKembalianValue,
+                      style: pw.TextStyle(
+                        fontSize: 11,
+                        font: pw.Font.ttf(fontTelidonHvRegular),
+                        height: 1.4,
+                      ),
+                      textAlign: pw.TextAlign.right,
+                    ),
+                  ],
+                ),
+              ],
+            ),
             pw.SizedBox(
               height: 20,
             ),
@@ -322,7 +382,7 @@ class TemplateInvoiceSpbu {
                 pw.TableRow(
                   children: [
                     pw.Text(
-                      "Nopol",
+                      "ID Kendaraan",
                       style: pw.TextStyle(
                         fontSize: 11,
                         font: pw.Font.ttf(fontTelidonHvRegular),
@@ -347,40 +407,40 @@ class TemplateInvoiceSpbu {
                     ),
                   ],
                 ),
+                // pw.TableRow(children: [pw.SizedBox(height: 1)]),
+                // pw.TableRow(
+                //   children: [
+                //     pw.Text(
+                //       "Pelanggan",
+                //       style: pw.TextStyle(
+                //         fontSize: 11,
+                //         font: pw.Font.ttf(fontTelidonHvRegular),
+                //         height: 1.4,
+                //       ),
+                //     ),
+                //     pw.Text(
+                //       ":",
+                //       style: pw.TextStyle(
+                //         fontSize: 11,
+                //         font: pw.Font.ttf(fontTelidonHvRegular),
+                //         height: 1.4,
+                //       ),
+                //     ),
+                //     pw.Text(
+                //       pelangganValue,
+                //       style: pw.TextStyle(
+                //         fontSize: 11,
+                //         font: pw.Font.ttf(fontTelidonHvRegular),
+                //         height: 1.4,
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 pw.TableRow(children: [pw.SizedBox(height: 1)]),
                 pw.TableRow(
                   children: [
                     pw.Text(
-                      "Pelanggan",
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                    ),
-                    pw.Text(
-                      ":",
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                    ),
-                    pw.Text(
-                      pelangganValue,
-                      style: pw.TextStyle(
-                        fontSize: 11,
-                        font: pw.Font.ttf(fontTelidonHvRegular),
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
-                ),
-                pw.TableRow(children: [pw.SizedBox(height: 1)]),
-                pw.TableRow(
-                  children: [
-                    pw.Text(
-                      "Operator",
+                      "Odometer",
                       style: pw.TextStyle(
                         fontSize: 11,
                         font: pw.Font.ttf(fontTelidonHvRegular),

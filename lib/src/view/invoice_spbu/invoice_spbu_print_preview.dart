@@ -94,6 +94,7 @@ class InvoiceSpbuPrintPreview extends StatelessWidget {
                   pelangganValue: viewModel.pelangganValue,
                   totalHargaValue: viewModel.totalHargaValue,
                   totalBayarValue: viewModel.totalBayarValue,
+                  totalKembalianValue: viewModel.totalKembalianValue,
                   fontSnaredrum: viewModel.fontSnareDrum!,
                   fontTelidonHvRegular: viewModel.fontTelidonHvRegular!,
                 ),

@@ -684,7 +684,7 @@ class TemplateInvoiceToko {
           pw.SizedBox(height: 10),
           pw.Center(
             child: pw.Text(
-              "####   Terimakasih atas kunjungan anda   ####",
+              "#### Terimakasih atas kunjungan anda ####",
               style: const pw.TextStyle(
                 fontSize: 8,
                 height: 1.4,

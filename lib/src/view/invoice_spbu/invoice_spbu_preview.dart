@@ -197,52 +197,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                         TableRow(
                           children: [
                             Text(
-                              "Total Liter",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                            ),
-                            Text(
-                              ":",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                            ),
-                            Text(
-                              "",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.5,
-                              ),
-                            ),
-                            Text(
-                              viewModel.totalLiterValue,
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                              textAlign: TextAlign.right,
-                            ),
-                          ],
-                        ),
-                        TableRow(
-                          children: [
-                            Text(
-                              "Harga/liter",
+                              "Harga/Liter",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
@@ -273,6 +228,51 @@ class InvoiceSpbuPreview extends StatelessWidget {
                             ),
                             Text(
                               viewModel.hargaPerliterValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            Text(
+                              "Liter",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              "",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.5,
+                              ),
+                            ),
+                            Text(
+                              viewModel.totalLiterValue,
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
@@ -391,6 +391,61 @@ class InvoiceSpbuPreview extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Table(
+                      columnWidths: const {
+                        0: FixedColumnWidth(100),
+                        1: FixedColumnWidth(15),
+                        2: FixedColumnWidth(30),
+                        3: FixedColumnWidth(100),
+                      },
+                      children: [
+                        TableRow(
+                          children: [
+                            Text(
+                              "Kembalian",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              ":",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              "Rp.",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                            ),
+                            Text(
+                              viewModel.totalKembalianValue,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: FontFamily.telidonHvRegular,
+                                color: Colors.blue.darkest,
+                                height: 1.4,
+                              ),
+                              textAlign: TextAlign.right,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                     const SizedBox(
                       height: 20,
                     ),
@@ -404,7 +459,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                         TableRow(
                           children: [
                             Text(
-                              "Nopol",
+                              "ID Kendaraan",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
@@ -438,41 +493,7 @@ class InvoiceSpbuPreview extends StatelessWidget {
                         TableRow(
                           children: [
                             Text(
-                              "Pelanggan",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                            ),
-                            Text(
-                              ":",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                            ),
-                            Text(
-                              viewModel.pelangganValue,
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: FontFamily.telidonHvRegular,
-                                color: Colors.blue.darkest,
-                                height: 1.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                        TableRow(
-                          children: [
-                            Text(
-                              "Operator",
+                              "Odometer",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,

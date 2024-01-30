@@ -159,6 +159,21 @@ class InvoiceSpbuViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  final TextEditingController totalKembalianController =
+      TextEditingController();
+  String _totalKembalianValue = '';
+  String get totalKembalianValue => _totalKembalianValue;
+  set totalKembalianValue(String value) {
+    _totalKembalianValue = value;
+    notifyListeners();
+  }
+
+  void onTapClearTotalKembalian() {
+    totalKembalianController.clear();
+    totalKembalianValue = '';
+    notifyListeners();
+  }
+
   final TextEditingController nopolController = TextEditingController();
   String _nopolValue = '';
   String get nopolValue => _nopolValue;

@@ -189,32 +189,6 @@ class InvoiceSpbuForms extends StatelessWidget {
                     prefix: const Padding(
                       padding: EdgeInsets.only(left: 8.0),
                       child: Icon(
-                        FluentIcons.blob_storage,
-                        size: 17,
-                      ),
-                    ),
-                    controller: viewModel.totalLiterController,
-                    label: "Total Liter",
-                    placeholder: "Masukkan Total Liter",
-                    onChanged: (value) {
-                      viewModel.totalLiterValue = value;
-                    },
-                    suffix: viewModel.totalLiterValue.isEmpty
-                        ? null
-                        : IconButton(
-                            icon: Icon(
-                              CupertinoIcons.clear_circled_solid,
-                              size: 20,
-                              color: Colors.red.lighter,
-                            ),
-                            onPressed: viewModel.onTapClearTotalLiter,
-                          ),
-                  ),
-                  const SizedBox(height: 14),
-                  TextBoxWithLabel(
-                    prefix: const Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: Icon(
                         FluentIcons.money,
                         size: 17,
                       ),
@@ -234,6 +208,32 @@ class InvoiceSpbuForms extends StatelessWidget {
                               color: Colors.red.lighter,
                             ),
                             onPressed: viewModel.onTapClearHargaPerliter,
+                          ),
+                  ),
+                  const SizedBox(height: 14),
+                  TextBoxWithLabel(
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: Icon(
+                        FluentIcons.blob_storage,
+                        size: 17,
+                      ),
+                    ),
+                    controller: viewModel.totalLiterController,
+                    label: "Liter",
+                    placeholder: "Masukkan Total Liter",
+                    onChanged: (value) {
+                      viewModel.totalLiterValue = value;
+                    },
+                    suffix: viewModel.totalLiterValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTotalLiter,
                           ),
                   ),
                   const SizedBox(height: 14),
@@ -299,13 +299,39 @@ class InvoiceSpbuForms extends StatelessWidget {
                     prefix: const Padding(
                       padding: EdgeInsets.only(left: 8.0),
                       child: Icon(
+                        FluentIcons.money,
+                        size: 17,
+                      ),
+                    ),
+                    controller: viewModel.totalKembalianController,
+                    label: "Kembalian (TUNAI)",
+                    placeholder: "Masukkan Total Kembalian (TUNAI)",
+                    onChanged: (value) {
+                      viewModel.totalKembalianValue = value;
+                    },
+                    suffix: viewModel.totalKembalianValue.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: Icon(
+                              CupertinoIcons.clear_circled_solid,
+                              size: 20,
+                              color: Colors.red.lighter,
+                            ),
+                            onPressed: viewModel.onTapClearTotalKembalian,
+                          ),
+                  ),
+                  const SizedBox(height: 14),
+                  TextBoxWithLabel(
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: Icon(
                         FluentIcons.payment_card,
                         size: 17,
                       ),
                     ),
                     controller: viewModel.nopolController,
-                    label: "Nomor Polisi",
-                    placeholder: "Masukkan Nomor Polisi",
+                    label: "ID Kendaraan",
+                    placeholder: "Masukkan ID Kendaraan",
                     onChanged: (value) {
                       viewModel.nopolValue = value;
                     },
@@ -320,33 +346,33 @@ class InvoiceSpbuForms extends StatelessWidget {
                             onPressed: viewModel.onTapClearNopol,
                           ),
                   ),
-                  const SizedBox(height: 14),
-                  TextBoxWithLabel(
-                    prefix: const Padding(
-                      padding: EdgeInsets.only(left: 8.0),
-                      child: Icon(
-                        FluentIcons.user_gauge,
-                        size: 17,
-                      ),
-                    ),
-                    controller: viewModel.pelangganController,
-                    label: "Nama Pelanggan",
-                    placeholder: "Masukkan Nama Pelanggan",
-                    onChanged: (value) {
-                      viewModel.pelangganValue = value;
-                    },
-                    suffix: viewModel.pelangganValue.isEmpty
-                        ? null
-                        : IconButton(
-                            icon: Icon(
-                              CupertinoIcons.clear_circled_solid,
-                              size: 20,
-                              color: Colors.red.lighter,
-                            ),
-                            onPressed: viewModel
-                                .onTapClearPelanggan, // onTapClearPelanggan,
-                          ),
-                  ),
+                  // const SizedBox(height: 14),
+                  // TextBoxWithLabel(
+                  //   prefix: const Padding(
+                  //     padding: EdgeInsets.only(left: 8.0),
+                  //     child: Icon(
+                  //       FluentIcons.user_gauge,
+                  //       size: 17,
+                  //     ),
+                  //   ),
+                  //   controller: viewModel.pelangganController,
+                  //   label: "Nama Pelanggan",
+                  //   placeholder: "Masukkan Nama Pelanggan",
+                  //   onChanged: (value) {
+                  //     viewModel.pelangganValue = value;
+                  //   },
+                  //   suffix: viewModel.pelangganValue.isEmpty
+                  //       ? null
+                  //       : IconButton(
+                  //           icon: Icon(
+                  //             CupertinoIcons.clear_circled_solid,
+                  //             size: 20,
+                  //             color: Colors.red.lighter,
+                  //           ),
+                  //           onPressed: viewModel
+                  //               .onTapClearPelanggan, // onTapClearPelanggan,
+                  //         ),
+                  // ),
                   const SizedBox(height: 14),
                   TextBoxWithLabel(
                     prefix: const Padding(
@@ -357,8 +383,8 @@ class InvoiceSpbuForms extends StatelessWidget {
                       ),
                     ),
                     controller: viewModel.operatorController,
-                    label: "Operator SPBU",
-                    placeholder: "Masukkan Operator SPBU",
+                    label: "Odometer",
+                    placeholder: "Masukkan Odometer",
                     onChanged: (value) {
                       viewModel.operatorValue = value;
                     },
