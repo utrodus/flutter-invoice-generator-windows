@@ -78,18 +78,9 @@ class _SplashViewState extends State<SplashView> {
                   color: Colors.white,
                 ),
                 SizedBox(width: 5),
-                Text(
-                  'Developed by: Utrodus & Ryan',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
               ],
             ),
           ),
-          const Spacer(),
           const Center(
               child: CircularProgressIndicator(
             valueColor: AlwaysStoppedAnimation<Color>(Colors.white),

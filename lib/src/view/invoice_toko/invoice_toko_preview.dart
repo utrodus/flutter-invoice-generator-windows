@@ -506,7 +506,7 @@ class InvoiceTokoPreview extends StatelessWidget {
                               children: [
                                 const SizedBox(),
                                 Text(
-                                  "Tax 10%",
+                                  "Tax 11%",
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.blue.darkest,

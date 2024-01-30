@@ -372,7 +372,7 @@ class TemplateInvoiceToko {
                 children: [
                   pw.SizedBox(),
                   pw.Text(
-                    "Tax 10%",
+                    "Tax 11%",
                     style: const pw.TextStyle(
                       fontSize: 8,
                       height: 1.4,

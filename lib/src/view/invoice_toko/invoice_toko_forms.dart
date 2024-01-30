@@ -335,7 +335,7 @@ class InvoiceTokoForms extends StatelessWidget {
                     ),
                   ),
                   controller: viewModel.pajakController,
-                  label: "Tax (10%)",
+                  label: "Tax (11%)",
                   placeholder: "Masukkan Tax",
                   onChanged: (value) {
                     viewModel.pajakValue = value;
